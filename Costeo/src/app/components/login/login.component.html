@@ -1,5 +1,6 @@
 <div class="full-screen">
-    <form class="form">
+    <form class="form"
+    (ngSubmit)="ingresarUsuario()">
         <div class="profile-pic">
             <img src="https://i.pinimg.com/originals/4c/6d/f9/4c6df95f02a071086571d91c3668043d.jpg" alt="Profile Picture">
             <div class="pic">
@@ -8,7 +9,12 @@
         </div>
         <div class="form-inputs">
             <i class="fa-solid fa-user">
-                <input type="text" value="Usuario" required>
+                <input
+                type="text"
+                value="Usuario"
+                required
+                name="texto"
+                [(ngModel)]="texto">
             </i>
             <br>
             <i class="fas fa-envelope">

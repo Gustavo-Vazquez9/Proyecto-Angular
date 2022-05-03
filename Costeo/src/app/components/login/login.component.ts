@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output} from '@angular/core';
-
+import { LoginService } from '../../components/login/services/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,10 +8,19 @@ import { Component, EventEmitter, Output} from '@angular/core';
 export class LoginComponent{
 
   texto: string = '';
-  constructor() { }
+  constructor(private serviseUsuario: LoginService ) {
+    this.serviseUsuario.obtenerUsuario()
+    .subscribe((respuesta)=>{
+        console.log(respuesta);
+    });
+   }
 
   ingresarUsuario(){
     console.log(this.texto);
+    this.serviseUsuario.insertarUsuario()
+    .subscribe((respuesta)=>{
+        console.log(respuesta);
+    });
   }
 
 }

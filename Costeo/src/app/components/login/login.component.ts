@@ -3,6 +3,7 @@ import { ServiceService } from 'src/app/Services/service.service';
 import { HttpClient } from '@angular/common/http';
 import { Users } from '../Interfaces/user.interface';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -27,6 +28,7 @@ export class LoginComponent{
     const newUser: Users = {"usuario": this.user, "correo": this.email, "contraseña": this.password }
     this.service.insertarUsusario(newUser).subscribe((respuesta)=>{
       console.log(respuesta)
+
     });
   }
 

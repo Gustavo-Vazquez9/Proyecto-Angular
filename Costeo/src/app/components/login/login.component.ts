@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output} from '@angular/core';
 import { ServiceService } from 'src/app/Services/service.service';
-import { HttpClient } from '@angular/common/http';
 import { Users } from '../Interfaces/user.interface';
 
 

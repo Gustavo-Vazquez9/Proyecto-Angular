@@ -17,6 +17,12 @@
       "correo": "lalo@gmail.com",
       "contraseña": "lalogft",
       "id": 3
+    },
+    {
+      "usuario": "Dani",
+      "correo": "",
+      "contraseña": "",
+      "id": 4
     }
   ]
 }

@@ -1,117 +1,52 @@
-@import "../../assets/scss/variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
-.busq {
-  width: 825px;
-  height: 120px;
-  background-color: map-get($colors, primary-bc);
-  border-radius: 40px;
-  position: absolute;
-  top: 10%;
-  left: 29%;
+* {
+  font-family: 'Poppins', sans-serif;
+}
 
-  .input-iconos {
-    width: 50%;
-    height: 50px;
-    background-color: black;
-    border-radius: 20px;
-    position: relative;
-    top: 40%;
-    left: 5%;
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 5%;
+  background-color: #A5D6A7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px 20px;
+
+  input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #cac7ff;
+
+    ::placeholder {
+      color: #cac7ff;
+    }
+  }
+
+  button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #A5D6A7;
     i {
-      width: 80%;
-      position: absolute;
-      font-size: 35px;
-      top: 15%;
-      left: 3%;
-      margin-bottom: 30px;
-
-      &:hover {
-        color: map-get($colors , primary );
-      }
-    }
-
-    input {
-      width: 100%;
-      height: 100%;
-      left: 0%;
-      top: 25%;
-      border: 0;
-      border-radius: 20px;
-      font-family: 'Poppins';
-      font-size: 24px;
-      text-align: center;
-
-      &:hover {
-        color: map-get($colors , primary );
-      }
-
-      &:active,
-      &:focus{
-        outline: none;
-      }
-
-      i {
-        width: 80%;
-        position: absolute;
-        font-size: 35px;
-        top: 15%;
-        left: 3%;
-        margin-bottom: 30px;
-
-        &:hover {
-          color: map-get($colors , primary );
-        }
-      }
-    }
-  }
-
-  h1 {
-    font-family: 'Poppins';
-    font-size: 30px;
-    position: absolute;
-    right: 10%;
-    top: -15px;
-  }
-
-  .btns {
-    position: absolute;
-    width: 350px;
-    height: 50px;
-    left: 60%;
-    top: 42%;
-
-
-
-    .btn {
-      width: 90px;
-      height: 50px;
-      margin-right: 1rem;
-      border-radius: 20px;
-      border: 0;
-      background-color: map-get($colors , primary-bg );
-      display: inline-block;
-      
-      &:hover {
-      color: map-get($colors , primary );
-      }
-
-
-        i {
-          width: 50%;
-          position: relative;
-          font-size: 30px;
-          top: 15%;
-          left: 3%;
-          margin-bottom: 30px;
-          justify-content: center;
-
-          &:hover {
-            color: map-get($colors , primary-bg );
-          }
-        }
+      width: 30px;
     }
   }
 }

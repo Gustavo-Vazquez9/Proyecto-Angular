@@ -8,12 +8,16 @@ import { Component} from '@angular/core';
 })
 export class LoginComponent{
 
-  
+  user: string = '';
+  password: string = '';
+  error: boolean = false;
 
   constructor() {
     
   }
 
-  
+  ingresarUsuario(){
+    console.log('hello world');
+  }
 
 }

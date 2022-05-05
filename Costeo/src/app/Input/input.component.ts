@@ -5,11 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements OnInit {
+export class InputComponent {
+
+  nombrePlat : string = '';
 
   constructor() { }
 
-  ngOnInit(): void {
+  personas(numero:Number){
+    console.log(numero);
+  }
+
+  ingresarPlat(){
+    console.log(this.nombrePlat);
   }
 
 }

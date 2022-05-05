@@ -18,7 +18,7 @@
   border-radius: 50px;
 
   .search-bar {
-    width: 25rem;
+    width: 20rem;
     height: 30px;
     background: #FFFFFF;
     display: flex;
@@ -67,29 +67,34 @@
     margin-left: 2%;
 
     h1 {
-      margin-left: 18%;
+      margin-left: 20%;
       font-size: 20px;
     }
 
-    button {
-      width: 60px;
-      height: 50px;
+    .content-box {
       display: inline-block;
-      margin-right: 1rem;
-      margin-top: -0.6rem;
-      border-radius: 20px;
-      border: none;
-      background-color: #FFFFFF;
-      justify-content: center;
-      align-items: center;
-      justify-self: center;
-      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+      padding-right: 12px;
 
-      i {
-        font-size: 1.5rem;
-        font-family: "Font Awesome 5 Free";
+      div {
+        padding: 1% 42%;
 
+        i{
+          font-size: 25px;
+          position: relative;
+          font-family: "Font Awesome 5 Free";
+        }
       }
+    }
+
+    .prueba {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+      i{
+        font-family: "Font Awesome 5 Free";
+      }
+
     }
   }
 

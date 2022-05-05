@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "usuarios": [{
             "usuario": "dani",
             "correo": "dani@gmail.com",
@@ -19,3 +20,14 @@
         }
     ]
 }
+=======
+  "usuarios": [
+    {
+      "usuario": "dani",
+      "correo": "dani@gmail.com",
+      "contraseña": "daniycharly",
+      "id": 1
+    }
+  ]
+}
+>>>>>>> d86b1516a382949cad3e03d54d5322809bb76e2b

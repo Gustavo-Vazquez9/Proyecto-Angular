@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Output} from '@angular/core';
-import { ServiceService } from 'src/app/Services/service.service';
-import { Users } from '../Interfaces/user.interface';
+import { Component} from '@angular/core';
 
 
 @Component({
@@ -10,35 +8,12 @@ import { Users } from '../Interfaces/user.interface';
 })
 export class LoginComponent{
 
-  user: string = '';
-  password: string = '';
-  passwordConfirm: string = '';
-  email: string = '';
   
-  error: boolean = false;
 
-  constructor(private service:ServiceService) {
-    this.service.obtenerUsusarios().subscribe((respuesta)=>{
-        console.log(respuesta);
-    });
+  constructor() {
+    
   }
 
-  ingresarUsuario(){
-    const newUser: Users =
-    {
-      "usuario": this.user,
-      "correo": this.email,
-      "contraseña": this.password
-    }
-    if(this.password === this.passwordConfirm)
-    {
-      this.service.insertarUsusario(newUser).subscribe((respuesta)=>{
-        console.log(respuesta)
-      });
-      this.error = false;
-    }else{
-      this.error= true;
-    }
-  }
+  
 
 }

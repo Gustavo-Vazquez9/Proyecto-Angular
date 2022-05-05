@@ -1,59 +1,31 @@
 <div class="full-screen">
+
     <div class="form">
-        <div class="profile-pic">
-            <img src="https://i.pinimg.com/originals/4c/6d/f9/4c6df95f02a071086571d91c3668043d.jpg" alt="Profile Picture">
-            <div class="pic">
-                <i class="fas fa-camera"></i>
-            </div>
-        </div>
-        <div
-        class="mensajeError"
-        *ngIf="error"
-        >
-          <p>¡Error! Las constraseñas no coinciden</p>
+        <h1>Bienvenido</h1>
+        <div class="mensajeError" *ngIf="error">
+            <p>¡Error! Las constraseñas no coinciden</p>
         </div>
         <div class="form-inputs">
-            <i class="fa-solid fa-user">
-                <input
-                type="text"
-                placeholder="Usuario"
-                required
-                name="user"
-                [(ngModel)]="user">
-            </i>
-            <br>
-            <i class="fas fa-envelope">
-                <input
-                type="email"
-                placeholder="Correo Electrónico"
-                required
-                name="email"
-                [(ngModel)]="email">
-            </i>
-            <br>
-            <i class="fas fa-lock">
-                <input
-                type="password"
-                placeholder="Contraseña"
-                required
-                name="password"
-                [(ngModel)]="password">
-            </i>
-            <br>
-            <i class="fas fa-lock">
-                <input
-                type="password"
-                placeholder="Confirmar Contraseña"
-                require
-                name="passwordConfirm"
-                [(ngModel)]="passwordConfirm">
-            </i>
-            <br>
+            <label>Usuario
+                <input type="text" placeholder="Ingresar nombre de usuario" required name="user" [(ngModel)]="user">
+            </label>
+
+            <label>Correo
+                <input type="email" placeholder="Ingresar correo electrónico" required name="email" [(ngModel)]="email">
+            </label>
+
+            <label>Contraseña
+                <input type="password" placeholder="Ingresar contraseña" required name="password" [(ngModel)]="password">
+            </label>
+
+            <label>Confirmar
+                <input type="password" placeholder="Confirmar Contraseña" require name="passwordConfirm" [(ngModel)]="passwordConfirm">
+            </label>
+
+
         </div>
         <div class="register-btn">
-            <button
-            type="submit"
-            (click)="ingresarUsuario()">Registrarse</button>
+            <button type="submit" (click)="ingresarUsuario()">Registrarse</button>
         </div>
     </div>
 </div>

@@ -14,21 +14,31 @@ export class LoginComponent{
   password: string = '';
   passwordConfirm: string = '';
   email: string = '';
+  error: boolean = false;
   // users: Users[];
 
-  constructor(private service:ServiceService) { 
+  constructor(private service:ServiceService) {
     this.service.obtenerUsusarios().subscribe((respuesta)=>{
         console.log(respuesta);
     });
   }
 
   ingresarUsuario(){
-    console.log(this.user);
-    const newUser: Users = {"usuario": this.user, "correo": this.email, "contraseña": this.password }
-    this.service.insertarUsusario(newUser).subscribe((respuesta)=>{
-      console.log(respuesta)
-
-    });
+    const newUser: Users =
+    {
+      "usuario": this.user,
+      "correo": this.email,
+      "contraseña": this.password
+    }
+    if(this.password === this.passwordConfirm)
+    {
+      this.service.insertarUsusario(newUser).subscribe((respuesta)=>{
+        console.log(respuesta)
+      });
+      this.error = false;
+    }else{
+      this.error= true;
+    }
   }
 
 }

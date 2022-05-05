@@ -14,7 +14,7 @@ export class LoginComponent{
   password: string = '';
   passwordConfirm: string = '';
   email: string = '';
-  // users: Users[];
+  
 
   constructor(private service:ServiceService) { 
     this.service.obtenerUsusarios().subscribe((respuesta)=>{

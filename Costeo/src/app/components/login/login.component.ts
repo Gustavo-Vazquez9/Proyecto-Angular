@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { ServiceService } from 'src/app/Services/service.service';
 
 
 @Component({
@@ -13,12 +14,13 @@ export class LoginComponent{
   error: boolean = false;
   isActive: boolean = false;
 
-  constructor() {
-    
+  constructor(private service:ServiceService) {
   }
 
-  ingresarUsuario(){
-    console.log('hello world');
+  validarUsuario(){
+    this.service.verificarUsuario(this.user).subscribe((data)=>{
+      console.log(data);
+    })
   }
 
 }

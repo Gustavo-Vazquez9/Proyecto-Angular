@@ -20,4 +20,13 @@ export class ServiceService {
   insertarUsusario(nuevoUsuario: Users):Observable<any>{
     return this.http.post('http://localhost:3000/usuarios', nuevoUsuario);
   }
+
+  verificarUsuario(usuario:string):Observable<any>{
+    return this.http.get(`http://localhost:3000/usuarios?usuario=${usuario}`)
+  }
+
+  verificarContraseña(contraseña:string):Observable<any>{
+    return this.http.get(`http://localhost:3000/usuarios?contraseña=${contraseña}`)
+  }
+
 }

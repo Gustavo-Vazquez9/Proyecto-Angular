@@ -21,7 +21,7 @@
             letter-spacing: 3px;
         }
         .form-inputs {
-            margin-top: 25px;
+            margin-top: 100px;
             label {
                 position: relative;
                 left: 25%;
@@ -50,7 +50,7 @@
         .register-btn {
             display: flex;
             justify-content: center;
-            margin-top: 50px;
+            margin-top: 75px;
             position: relative;
             button {
                 background-color: map-get($colors, "primary");
@@ -76,6 +76,18 @@
             box-shadow: 0px 3px 5px #aaa;
             p {
                 color: rgb(189, 3, 3);
+            }
+        }
+        a {
+            position: absolute;
+            text-decoration: none;
+            color: map-get($colors, "link-color");
+            margin-top: 50px;
+            left: 35%;
+            transition: all 0.3s ease;
+            &:hover {
+                text-decoration: underline;
+                font-size: 17px;
             }
         }
     }

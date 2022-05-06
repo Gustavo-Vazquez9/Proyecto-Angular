@@ -1,7 +1,7 @@
 <div class="full-screen">
 
     <div class="form">
-        <h1>Bienvenido</h1>
+        <h1>Hola de nuevo</h1>
         <div class="mensajeError" *ngIf="error">
             <p>¡Error! Las constraseñas no coinciden</p>
         </div>
@@ -11,15 +11,14 @@
             </label>
 
             <label>Contraseña
-                <input placeholder="Ingresar contraseña" required name="contrasenia" [ngModel]="contrasenia | password:isActive"
-                (ngModelChange)="contrasenia = $event">
-                <i (click)="isActive=!isActive" class="fas fa-eye input-icon password"></i>
+                <input [type]="isActive ? 'text' : 'password'">
+                <i (click)="isActive = !isActive" class="fas fa-eye input-icon password"></i>
             </label>
 
         </div>
         <div class="register-btn">
-            <button type="submit" (click)="ingresarUsuario()">Registrarse</button>
+            <button type="submit" (click)="validarUsuario()">Ingresar</button>
         </div>
-        <a [routerLink]="['/register']">Registrate</a>
+        <a [routerLink]="['/register']">¿No tienes cuenta? Registrate</a>
     </div>
 </div>

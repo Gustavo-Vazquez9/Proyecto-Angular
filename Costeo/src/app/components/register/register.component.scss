@@ -67,5 +67,17 @@
                 color: rgb(189, 3, 3);
             }
         }
+        a {
+            position: absolute;
+            text-decoration: none;
+            color: map-get($colors, "link-color");
+            margin-top: 35px;
+            left: 40%;
+            transition: all 0.3s ease;
+            &:hover {
+                text-decoration: underline;
+                font-size: 17px;
+            }
+        }
     }
 }

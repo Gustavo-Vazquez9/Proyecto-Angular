@@ -9,8 +9,9 @@ import { Component} from '@angular/core';
 export class LoginComponent{
 
   user: string = '';
-  password: string = '';
+  contrasenia: string = '';
   error: boolean = false;
+  isActive: boolean = false;
 
   constructor() {
     

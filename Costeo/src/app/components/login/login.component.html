@@ -11,7 +11,9 @@
             </label>
 
             <label>Contraseña
-                <input type="password" placeholder="Ingresar contraseña" required name="password" [(ngModel)]="password">
+                <input placeholder="Ingresar contraseña" required name="contrasenia" [ngModel]="contrasenia | password:isActive"
+                (ngModelChange)="contrasenia = $event">
+                <i (click)="isActive=!isActive" class="fas fa-eye input-icon password"></i>
             </label>
 
         </div>

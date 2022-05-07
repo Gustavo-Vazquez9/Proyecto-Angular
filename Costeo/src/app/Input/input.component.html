@@ -11,26 +11,16 @@
 
   <div class="flex-box">
     <h1>No. personas</h1>
-    <div class="content-box">
-      <div><i class="fas fa-user"></i></div>
-      <input type="radio" id="individual" name="drone" value="individual" checked>
-      <label for="individual">Individual</label>
+    <div class="content-box" (click)="personas(1)">
+      <i class="fas fa-user"></i>
     </div>
 
-    <div class="content-box">
-      <div><i class="fas fa-user-friends"></i></div>
-      <input type="radio" id="pareja" name="drone" value="pareja">
-      <label for="pareja">Pareja</label>
+    <div class="content-box" (click)="personas(2)">
+      <i class="fas fa-user-friends"></i>
     </div>
 
-    <div class="content-box">
-      <div><i class="fas fa-users"></i></div>
-      <input type="radio" id="grupo" name="drone" value="grupo">
-      <label for="grupo">Grupo</label>
-    </div>
-
-    <div class="prueba" (click)="personas(1)">
-    <i class="fas fa-user"></i>
+    <div class="content-box" (click)="personas(5)">
+      <i class="fas fa-users"></i>
     </div>
   </div>
 

@@ -1,52 +1,40 @@
 <div class="contenedor-form">
-  <img src="../../assets/img/fruta.png" alt="Rábanos">
+  <img alt="Ingrediente" [src]="imagen">
 
   <form action="">
 
     <div class="ingrediente-container">
         <label>Ingrediente: </label>
         <br>
-        <input type="text">
+        <input type="text" (keyup.enter)="getIngredienteInput()" #ingredienteInput>
         <br>
         <label>Cantidad: </label>
         <br>
-        <input type="number">
+        <input type="number" #cantidadInput>
     </div>
 
     <div class="container-ingrediente-2">
       <label>Unidad: </label>
       <br>
-      <select>
-        <option value="noSeleccion">- - -</option>
-        <option value="CDA">CDA</option>
-        <option value="PZCA">PZCA</option>
-        <option value="TZA">TZA</option>
-        <option value="G">G</option>
-        <option value="KG">KG</option>
-        <option value="ML">ML</option>
-        <option value="L">L</option>
-        <option value="PZA">PZA</option>
-        <option value="DTE">DTE</option>
-        <option value="H">H</option>
-        <option value="RMA">RMA</option>
-        <option value="TROZO">TROZO</option>
-        <option value="LONCHA">LONCHA</option>
-        <option value="Y/C">Y/C</option>
-        <option value="C/S">C/S</option>
+      <select #selecUnidad  (change)="getUnidad()">
+        <option [value]="unidad" *ngFor="let unidad of unidades">
+          {{unidad}}
+        </option>
+
       </select>
       <br>
 
       <label>Precio: </label>
       <br>
-      <input type="number">
+      <input type="number" #precioInput>
       <br>
 
       <label>Peso: </label>
       <br>
-      <input type="number">
+      <input type="number" #pesoInput>
       <br>
 
-      <button>Agregar</button>
+      <button [disabled]="disabledButton" (click)="clickBoton()">Agregar</button>
     </div>
   </form>
 </div>

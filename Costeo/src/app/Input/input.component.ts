@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -10,6 +10,7 @@ export class InputComponent {
   @Output() onPlatillo : EventEmitter<string> = new EventEmitter();
   @Output() onPersonas : EventEmitter<number> = new EventEmitter();
   activarPersona : number = 0;
+  
   nombrePlat : string = '';
 
   constructor() { }
@@ -28,6 +29,5 @@ export class InputComponent {
     this.onPlatillo.emit(this.nombrePlat);
     this.onPersonas.emit(this.activarPersona);
   }
-
 
 }

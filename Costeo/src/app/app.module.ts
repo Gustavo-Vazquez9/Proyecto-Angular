@@ -14,7 +14,8 @@ import { InputComponent } from './components/Input/input.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
@@ -22,11 +23,10 @@ import { InputComponent } from './components/Input/input.component';
     TablaPreciosModule,
     FormsModule,
     HttpClientModule,
+  ],
+  exports: [
     InputComponent
   ],
-  // exports: [
-  //   InputComponent
-  // ],
 
   providers: [],
   bootstrap: [AppComponent]

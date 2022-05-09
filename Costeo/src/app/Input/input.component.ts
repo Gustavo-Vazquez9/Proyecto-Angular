@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent {
 
+  @Output() onPlatillo : EventEmitter<string> = new EventEmitter();
+  @Output() onPersonas : EventEmitter<number> = new EventEmitter();
   activarPersona : number = 0;
   nombrePlat : string = '';
 
@@ -14,17 +16,18 @@ export class InputComponent {
 
   personas( numero : number ){
     this.activarPersona = numero;
-    console.log(numero);
   }
 
   activar( num : number ) : string {
     return( num === this.activarPersona)
       ? 'activo'
-    : 'content-box'
+    : 'normal'
   }
 
   ingresarPlat(){
-    console.log(this.nombrePlat);
+    this.onPlatillo.emit(this.nombrePlat);
+    this.onPersonas.emit(this.activarPersona);
   }
+
 
 }

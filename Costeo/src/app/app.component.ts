@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title='Input';
+
+  platillo(plato:string){
+    console.log(plato);
+  }
+
+  personas(cantidad:number){
+    console.log(cantidad);
+  }
 }

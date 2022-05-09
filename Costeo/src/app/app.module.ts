@@ -6,9 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputComponent } from './Input/input.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    InputComponent
+  ],
+  exports: [
     InputComponent
   ],
   imports: [

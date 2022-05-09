@@ -70,13 +70,9 @@
       font-size: 18px;
     }
 
-    .content-box .activo {
 
-        background-color: #43A047;
 
-    }
-
-    .content-box {
+    .normal {
       width: 30px;
       height: 30px;
       display: inline-block;
@@ -87,8 +83,6 @@
       text-align: center;
       background-color: #EEEEEE;
       box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-
 
       &:hover {
         background-color: #43A047;
@@ -104,6 +98,13 @@
           position: relative;
           font-family: "Font Awesome 5 Free";
         }
+    }
+
+    .activo {
+      background-color: #43A047;
+      i {
+        color: #EEEEEE;
+      }
     }
   }
 }

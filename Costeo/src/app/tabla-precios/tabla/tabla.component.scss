@@ -2,7 +2,6 @@
 body{
   width: 100vw;
   height: 100vh;
-  background-color: #E5E5E5;
   position: absolute;
   font-family:'Poppins', sans-serif;
 
@@ -12,7 +11,7 @@ body{
     width: 1200px;
     height: 480px;
     margin-left: 90px;
-    margin-top: 105px;
+    margin-top: 700px;
     background-color: #43A046;
     border-radius: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -45,7 +44,7 @@ body{
       border-style: none;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
       &:hover{
-        background-color: #9b9b9b;
+        background-color: #8a8888;
       }
     }
   }

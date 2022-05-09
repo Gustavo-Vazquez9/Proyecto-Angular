@@ -7,12 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputComponent {
 
+  activarPersona : number = 0;
   nombrePlat : string = '';
 
   constructor() { }
 
-  personas(numero:Number){
+  personas( numero : number ){
+    this.activarPersona = numero;
     console.log(numero);
+  }
+
+  activar( num : number ) : string {
+    return( num === this.activarPersona)
+      ? 'activo'
+    : 'content-box'
   }
 
   ingresarPlat(){

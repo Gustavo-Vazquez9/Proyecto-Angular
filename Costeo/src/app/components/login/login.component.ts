@@ -11,16 +11,27 @@ export class LoginComponent{
 
   user: string = '';
   contrasenia: string = '';
-  error: boolean = false;
+
+
+  errorUser: boolean = false;
+  errorPassword: boolean = false;
   isActive: boolean = false;
 
   constructor(private service:ServiceService) {
   }
 
-  validarUsuario(){
-    this.service.verificarUsuario(this.user).subscribe((data)=>{
-      console.log(data);
-    })
+  validarUsuario()
+  {
+    this.service.verificarUsuario(this.user).subscribe((data)=>
+    {
+      if(data[0].contraseña === this.contrasenia)
+        {
+          console.log(data);
+        }else
+        {
+          this.errorPassword = true;
+        }
+    });
   }
 
 }

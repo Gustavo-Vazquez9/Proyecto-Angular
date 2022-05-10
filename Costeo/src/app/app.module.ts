@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablaPreciosModule } from './tabla-precios/tabla-precios.module';
-
 @NgModule({
   declarations: [
     AppComponent
@@ -14,6 +14,9 @@ import { TablaPreciosModule } from './tabla-precios/tabla-precios.module';
     AppRoutingModule,
     TablaPreciosModule
   ],
+  exports: [
+  ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

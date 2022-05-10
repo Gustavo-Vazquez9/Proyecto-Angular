@@ -18,47 +18,71 @@
   margin: 0 auto;
 
   img {
-    position: relative;
+    position: absolute;
     width: 36%;
     height: 37%;
-    top: 1%;
+    top: 10%;
   }
 
   .ingrediente-container {
+    position: absolute;
+    top: 40%;
     padding-top: 10px;
     background-color: #e5e5e5;
     width: 36%;
     height: 25vh;
     padding-top: 30px;
-    margin-top: 70px;
+    margin-top: 80px;
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    label {
+    #label_ing {
+      position: absolute;
       font-size: 20px;
+      left: 35%;
     }
 
-    input {
+    #label_cantidad {
+      position: absolute;
+      font-size: 20px;
+      left: 35%;
+      margin-top: 60px;
+    }
+
+    #input_ing {
+      position: absolute;
+      left: 15%;
       width: 70%;
       height: 8%;
       padding: 5px;
-      margin-top: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    #inputCantidad {
+      position: absolute;
+      left: 15%;
+      width: 70%;
+      height: 8%;
+      padding: 5px;
+      margin-top: 70px;
       margin-bottom: 30px;
     }
   }
 
   .container-ingrediente-2 {
     background-color: #e5e5e5;
-    position: fixed;
+    position: absolute;
     left: 50%;
-    top: 21%;
-    width: 23%;
-    height: 52%;
+    top: 11%;
+    width: 44%;
+    height: 75%;
     text-align: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-top: 50px;
 
     input {
+      position: absolute;
       width: 70%;
       height: 5%;
       padding: 5px;
@@ -67,22 +91,58 @@
     }
 
     select {
+      position: absolute;
+      top: 10%;
+      left: 6%;
       margin: 20px;
-      width: 60%;
+      width: 80%;
       height: 5%;
       margin-bottom: 40px;
     }
 
-    label {
+    #label_unidad {
+      position: absolute;
       margin: 50px;
+      top: -5%;
+      left: 26%;
     }
 
+    #label_precio {
+      position: absolute;
+      margin: 50px;
+      top: 20%;
+      left: 29%;
+    }
+
+    #input_precio {
+      position: absolute;
+      top: 37%;
+      left: 9%;
+      width: 80%;
+    }
+
+    #label_peso {
+      position: absolute;
+      margin: 50px;
+      top: 45%;
+      left: 32%;
+    }
+
+    #input_peso {
+      position: absolute;
+      top: 62%;
+      left: 9%;
+      width: 80%;
+    }
+
+
     button {
+      position: absolute;
       margin-top: 30px;
       width: 50%;
       height: 10%;
-      left: 789px;
-      top: 746px;
+      left: 26%;
+      top: 75%;
       background: #43a047;
       border: 0;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -103,11 +163,13 @@
   }
 
   input {
+    position: absolute;
     border-radius: 20px;
     border-width: 0;
   }
 
   label {
+    position: absolute;
     font-size: 20px;
   }
 

@@ -6,15 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Costeo';
-
-  titulo='Input';
-
-  platillo(plato:string){
-    console.log(plato);
-  }
-
-  personas(cantidad:number){
-    console.log(cantidad);
-  }
 }

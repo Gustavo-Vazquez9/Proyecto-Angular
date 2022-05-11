@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
 
 
@@ -17,7 +18,7 @@ export class LoginComponent{
   errorPassword: boolean = false;
   isActive: boolean = false;
 
-  constructor(private service:ServiceService) {
+  constructor(private service:ServiceService,private _router: Router) {
   }
 
   validarUsuario()
@@ -27,6 +28,7 @@ export class LoginComponent{
       if(data[0].contraseña === this.contrasenia)
         {
           console.log(data);
+          this._router.navigate(['/costeo']);
         }else
         {
           this.errorPassword = true;

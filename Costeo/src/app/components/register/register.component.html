@@ -1,32 +1,32 @@
 <div class="full-screen">
 
-    <div class="form">
-        <h1>Bienvenido</h1>
-        <div class="mensajeError" *ngIf="error">
-            <p>¡Error! Las constraseñas no coinciden</p>
-        </div>
-        <div class="form-inputs">
-            <label>Usuario
-                <input type="text" placeholder="Ingresar nombre de usuario" required name="user" [(ngModel)]="user">
-            </label>
+  <div class="form">
+      <h1>Bienvenido</h1>
+      <div class="mensajeError" *ngIf="error">
+          <p>¡Error! Las constraseñas no coinciden</p>
+      </div>
+      <div class="form-inputs">
+          <label>Usuario
+              <input type="text" placeholder="Ingresar nombre de usuario" required name="user" [(ngModel)]="user">
+          </label>
 
-            <label>Correo
-                <input type="email" placeholder="Ingresar correo electrónico" required name="email" [(ngModel)]="email">
-            </label>
+          <label>Correo
+              <input type="email" placeholder="Ingresar correo electrónico" required name="email" [(ngModel)]="email">
+          </label>
 
-            <label>Contraseña
-                <input type="password" placeholder="Ingresar contraseña" required name="password" [(ngModel)]="password">
-            </label>
+          <label>Contraseña
+              <input type="password" placeholder="Ingresar contraseña" required name="password" [(ngModel)]="password">
+          </label>
 
-            <label>Confirmar
-                <input type="password" placeholder="Confirmar Contraseña" require name="passwordConfirm" [(ngModel)]="passwordConfirm">
-            </label>
+          <label>Confirmar
+              <input type="password" placeholder="Confirmar Contraseña" require name="passwordConfirm" [(ngModel)]="passwordConfirm">
+          </label>
 
 
-        </div>
-        <div class="register-btn">
-            <button type="submit" (click)="ingresarUsuario()">Registrarse</button>
-        </div>
-        <a [routerLink]="['/login']">¿Ya tienes cuenta?</a>
-    </div>
+      </div>
+      <div class="register-btn">
+          <button type="submit" (click)="ingresarUsuario()">Registrarse</button>
+      </div>
+      <a [routerLink]="['/login']">¿Ya tienes cuenta?</a>
+  </div>
 </div>

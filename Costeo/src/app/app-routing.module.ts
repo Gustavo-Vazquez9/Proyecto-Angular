@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { TablaPreciosComponent } from './tabla-precios/tabla-precios.component';
 
 const routes: Routes = [
   {
@@ -15,8 +16,13 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'costeo',
+    component: TablaPreciosComponent,
+    pathMatch: 'full',
+  },
+  {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'login',
   },
 ];
 

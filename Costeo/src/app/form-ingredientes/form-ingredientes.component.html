@@ -6,7 +6,7 @@
     <div class="ingrediente-container">
         <label id="label_ing">Ingrediente: </label>
         <br>
-        <input id="input_ing" type="text" (keyup.enter)="getIngredienteInput()" #ingredienteInput>
+        <input id="input_ing" type="text" (keyup)="getIngredienteInput()" #ingredienteInput>
         <br>
         <label id="label_cantidad">Cantidad: </label>
         <br>
@@ -17,6 +17,7 @@
       <label id="label_unidad">Unidad: </label>
       <br>
       <select #selecUnidad  (change)="getUnidad()">
+        <option value="primera_opcion">- - -</option>
         <option [value]="unidad" *ngFor="let unidad of unidades">
           {{unidad}}
         </option>

@@ -1,3 +1,9 @@
+<app-form-ingredientes
+(onIngredienteNombre)="recibirNombre($event)"
+(onCantidadNombre)="recibirCantidad($event)"
+(onUnidadNombre)="recibirUnidad($event)"
+(onPrecioNombre)="recibirPrecio($event)"
+(onTotal)="esTotal($event)"></app-form-ingredientes>
 <section class="table-decoration">
   <table>
     <thead>
@@ -5,13 +11,14 @@
         <th>Ingrediente</th><th>Cantidad</th><th>Unidad</th><th>Precio</th><th>Total</th>
       </tr>
     </thead>
-      <tr>
-        <td class="with-border">Hola</td>
-        <td class="with-border">fgfgf</td>
-        <td class="with-border">ggg</td>
-        <td class="with-border">ggg</td>
-        <td class="nula">ggg</td>
+      <tr *ngFor="let item of lista_ingredientes ">
+        <td class="with-border">{{item [0]}}</td>
+        <td class="with-border">{{item [1]}}</td>
+        <td class="with-border">{{item [2]}}</td>
+        <td class="with-border">{{item [3]}}</td>
+        <td class="nula">{{item [4]}}</td>
       </tr>
+
   </table>
   <button>Finalizar</button>
 </section>

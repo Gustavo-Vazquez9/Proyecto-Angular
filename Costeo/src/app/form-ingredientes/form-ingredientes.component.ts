@@ -44,7 +44,7 @@ export class FormIngredientesComponent {
   @Output() onUnidadNombre: EventEmitter<string> = new EventEmitter();
   @Output() onPrecioNombre: EventEmitter<number> = new EventEmitter();
   @Output() onTotal: EventEmitter<number> = new EventEmitter();
-  @Output() onPesoNombre: EventEmitter<string> = new EventEmitter();
+  @Output() onPesoNombre: EventEmitter<number> = new EventEmitter();
 
   // @Output() ingrediente_output = new EventEmitter<Ingrediente>();
 
@@ -106,7 +106,6 @@ export class FormIngredientesComponent {
     }
 
     this.ingrediente_.amount = this.inputCantidad.nativeElement.value;
-    console.log(this.inputCantidad.nativeElement.value);
   }
 
   clickBoton() {
@@ -119,6 +118,7 @@ export class FormIngredientesComponent {
         this.ingrediente_.amount *
         this.ingrediente_.weight
     );
+    this.onPesoNombre.emit(this.validarPeso(this.seleccionUnidad));
 
     this.inputIngrediente.nativeElement.value = '';
     this.inputCantidad.nativeElement.value = '';
@@ -127,5 +127,50 @@ export class FormIngredientesComponent {
     this.imagen = '../../assets/img/fruta.png';
     this.selecUnidad.nativeElement.value = 'primera_opcion';
     this.unidades = [];
+  }
+
+  validarPeso(unidad: string): number {
+    let pesoCorrecto = 0.0;
+
+    switch(unidad) {
+      case 'kg':
+      case 'L':
+        pesoCorrecto = this.ingrediente_.amount*this.ingrediente_.price;
+        break;
+      case 'Pza':
+        pesoCorrecto = (this.ingrediente_.amount*this.ingrediente_.weight)*this.ingrediente_.price;
+        break;
+      case 'c/s':
+        pesoCorrecto = this.ingrediente_.amount*0.0*this.ingrediente_.price;
+        break;
+      case 'G':
+      case 'Ml':
+        pesoCorrecto = (this.ingrediente_.amount*this.ingrediente_.price)/1000;
+        break;
+      case 'Tza':
+        pesoCorrecto = this.ingrediente_.amount*0.34*this.ingrediente_.price;
+        break;
+      case 'Cda':
+        break;
+      case 'y/c':
+      case 'H':
+      case 'Rma':
+      case 'Pzca':
+        pesoCorrecto = this.ingrediente_.amount*0.5*this.ingrediente_.price;
+        break;
+      case 'Dte':
+      case 'Cda':
+        pesoCorrecto = this.ingrediente_.amount*0.15*this.ingrediente_.price;
+        break;
+      case 'Trozo':
+        pesoCorrecto = this.ingrediente_.amount*0.1*this.ingrediente_.price;
+        break;
+      case 'Loncha':
+        pesoCorrecto = this.ingrediente_.amount*0.2*this.ingrediente_.price;
+        break;
+    }
+
+    return pesoCorrecto;
+
   }
 }

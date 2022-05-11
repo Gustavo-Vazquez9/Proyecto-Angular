@@ -15,6 +15,7 @@ export class TablaPreciosComponent implements OnInit {
   unidad : string = "";
   precio : number = 0;
   total : number = 0;
+  peso: number;
 
 
 
@@ -48,6 +49,11 @@ export class TablaPreciosComponent implements OnInit {
   esTotal(recibeTotal:number){
     this.total=recibeTotal;
     this.lista_ingredientes.push([this.ingrediente,this.cantidad,this.unidad,this.precio,this.total]);
+  }
+
+  recibirPeso(peso:number) {
+    this.peso = peso;
+    console.log(this.peso);
   }
 
 }

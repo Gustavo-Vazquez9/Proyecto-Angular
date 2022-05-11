@@ -31,7 +31,7 @@ export class FormIngredientesComponent {
   imagen: String = '../../assets/img/fruta.png';
   seleccionUnidad = '';
   disabledButton: boolean = true;
-  cantidadInput = '';
+  cantidadInput: number;
 
   @ViewChild('ingredienteInput') inputIngrediente: ElementRef;
   @ViewChild('cantidadInput') inputCantidad: ElementRef;
@@ -44,6 +44,8 @@ export class FormIngredientesComponent {
   @Output() onUnidadNombre: EventEmitter<string> = new EventEmitter();
   @Output() onPrecioNombre: EventEmitter<number> = new EventEmitter();
   @Output() onTotal: EventEmitter<number> = new EventEmitter();
+  @Output() onPesoNombre: EventEmitter<string> = new EventEmitter();
+
   // @Output() ingrediente_output = new EventEmitter<Ingrediente>();
 
   constructor(private service: ApiService) {
@@ -64,13 +66,13 @@ export class FormIngredientesComponent {
         this.imagen = this.ingredientes[i].img;
 
         this.cantidadInput = this.inputCantidad.nativeElement.value;
+        console.log(this.cantidadInput);
 
         this.ingrediente_.id = this.ingredientes[i].id;
         this.ingrediente_.img = this.ingredientes[i].img;
         this.ingrediente_.name = this.ingredientes[i].name;
         this.ingrediente_.price = this.ingredientes[i].price;
         this.ingrediente_.weight = this.ingredientes[i].weight;
-
 
         break;
       } else {
@@ -83,13 +85,28 @@ export class FormIngredientesComponent {
     this.seleccionUnidad = this.selecUnidad.nativeElement.value;
     this.ingrediente_.unity = this.selecUnidad.nativeElement.value;
 
-    if (this.seleccionUnidad === 'primera_opcion') {
-      console.log("entree");
+    if (this.seleccionUnidad === 'primera_opcion' || this.inputCantidad.nativeElement.value === '' ) {
       this.disabledButton = true;
     } else {
       this.disabledButton = false;
-
     }
+  }
+
+  validarCantidad() {
+    if (
+      this.inputIngrediente.nativeElement.value === '' ||
+      this.inputCantidad.nativeElement.value === '' ||
+      this.inputPrecio.nativeElement.value === '' ||
+      this.inputPeso.nativeElement.value === '' ||
+      this.seleccionUnidad === ''
+    ) {
+      this.disabledButton = true;
+    } else {
+      this.disabledButton = false;
+    }
+
+    this.ingrediente_.amount = this.inputCantidad.nativeElement.value;
+    console.log(this.inputCantidad.nativeElement.value);
   }
 
   clickBoton() {
@@ -97,6 +114,18 @@ export class FormIngredientesComponent {
     this.onCantidadNombre.emit(this.ingrediente_.amount);
     this.onUnidadNombre.emit(this.seleccionUnidad);
     this.onPrecioNombre.emit(this.ingrediente_.price);
-    this.onTotal.emit(this.ingrediente_.weight);
+    this.onTotal.emit(
+      this.ingrediente_.price *
+        this.ingrediente_.amount *
+        this.ingrediente_.weight
+    );
+
+    this.inputIngrediente.nativeElement.value = '';
+    this.inputCantidad.nativeElement.value = '';
+    this.inputPrecio.nativeElement.value = '';
+    this.inputPeso.nativeElement.value = '';
+    this.imagen = '../../assets/img/fruta.png';
+    this.selecUnidad.nativeElement.value = 'primera_opcion';
+    this.unidades = [];
   }
 }

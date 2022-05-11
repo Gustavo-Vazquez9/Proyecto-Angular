@@ -10,7 +10,7 @@
         <br>
         <label id="label_cantidad">Cantidad: </label>
         <br>
-        <input id="inputCantidad" type="number" #cantidadInput>
+        <input id="inputCantidad" type="number" #cantidadInput (keyup)="validarCantidad()"(change)="validarCantidad()" min="1">
     </div>
 
     <div class="container-ingrediente-2">

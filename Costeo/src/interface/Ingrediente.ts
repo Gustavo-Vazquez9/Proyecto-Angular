@@ -5,4 +5,5 @@ export interface Ingrediente {
   unity: string[];
   price: number;
   weight: number;
+  amount: number;
 }

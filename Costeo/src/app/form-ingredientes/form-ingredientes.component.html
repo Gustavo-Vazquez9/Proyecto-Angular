@@ -4,19 +4,20 @@
   <form action="">
 
     <div class="ingrediente-container">
-        <label>Ingrediente: </label>
+        <label id="label_ing">Ingrediente: </label>
         <br>
-        <input type="text" (keyup.enter)="getIngredienteInput()" #ingredienteInput>
+        <input id="input_ing" type="text" (keyup)="getIngredienteInput()" #ingredienteInput>
         <br>
-        <label>Cantidad: </label>
+        <label id="label_cantidad">Cantidad: </label>
         <br>
-        <input type="number" #cantidadInput>
+        <input id="inputCantidad" type="number" #cantidadInput (keyup)="validarCantidad()"(change)="validarCantidad()" min="1">
     </div>
 
     <div class="container-ingrediente-2">
-      <label>Unidad: </label>
+      <label id="label_unidad">Unidad: </label>
       <br>
       <select #selecUnidad  (change)="getUnidad()">
+        <option value="primera_opcion">- - -</option>
         <option [value]="unidad" *ngFor="let unidad of unidades">
           {{unidad}}
         </option>
@@ -24,14 +25,14 @@
       </select>
       <br>
 
-      <label>Precio: </label>
+      <label id="label_precio">Precio: </label>
       <br>
-      <input type="number" #precioInput>
+      <input id="input_precio" type="number" #precioInput>
       <br>
 
-      <label>Peso: </label>
+      <label id="label_peso">Peso: </label>
       <br>
-      <input type="number" #pesoInput>
+      <input id="input_peso" type="number" #pesoInput>
       <br>
 
       <button [disabled]="disabledButton" (click)="clickBoton()">Agregar</button>

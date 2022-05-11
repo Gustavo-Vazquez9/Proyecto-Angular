@@ -5,32 +5,24 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< HEAD
+import { FormIngredientesComponent } from './form-ingredientes/form-ingredientes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { TablaPreciosComponent } from './tabla-precios/tabla-precios.component';
 import { CosteoHeaderComponent } from './costeo/header/costeo-header/costeo-header.component';
-=======
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { PasswordPipe } from './Pipes/password.pipe';
 
->>>>>>> 869a7b82eabb076ec36d1aa2b4084fcdea6f60b6
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    CosteoHeaderComponent
-=======
-    LoginComponent,
-    RegisterComponent,
-    PasswordPipe
->>>>>>> 869a7b82eabb076ec36d1aa2b4084fcdea6f60b6
+    FormIngredientesComponent,
+    TablaPreciosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    AppRoutingModule
   ],
+  exports: [FormIngredientesComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

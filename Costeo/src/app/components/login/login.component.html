@@ -1,0 +1,39 @@
+<div class="full-screen">
+
+    <div class="form">
+        <h1>Hola de nuevo</h1>
+        <div class="mensajeError"
+        *ngIf="errorUser">
+            <p>¡Error! El usuario no existe, verifique su usuario</p>
+        </div>
+        <div class="mensajeError"
+        *ngIf="errorPassword">
+            <p>¡Error! La contraseña no coincide</p>
+        </div>
+        <div class="form-inputs">
+            <label>Usuario
+                <input
+                type="text"
+                placeholder="Ingresar nombre de usuario"
+                required
+                name="user"
+                [(ngModel)]="user">
+            </label>
+
+            <label>Contraseña
+                <input
+                [type]="isActive ? 'text' : 'password'"
+                placeholder="Ingresar contraseña"
+                name="contrasenia"
+                [(ngModel)]="contrasenia"
+                >
+                <i (click)="isActive = !isActive" class="fas fa-eye input-icon password"></i>
+            </label>
+
+        </div>
+        <div class="register-btn">
+            <button type="submit" (click)="validarUsuario()">Ingresar</button>
+        </div>
+        <a [routerLink]="['/register']">¿No tienes cuenta? Registrate</a>
+    </div>
+</div>

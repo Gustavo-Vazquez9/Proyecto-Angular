@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "usuario": "dani",
+      "correo": "dani@gmail.com",
+      "contraseña": "daniycharly",
+      "id": 1
+    },
+    {
+      "usuario": "gus",
+      "correo": "gus@gmail.com",
+      "contraseña": "abc123",
+      "id": 2
+    },
+    {
+      "usuario": "lalito",
+      "correo": "lalo@gmail.com",
+      "contraseña": "lalogft",
+      "id": 3
+    },
+    {
+      "usuario": "Gus",
+      "correo": "gus@gmail.com",
+      "contraseña": "123",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<div class="container">
+  <form action="" class="search-bar">
+    <button type="submit" (click)="ingresarPlat()"> <i class="fas fa-search"></i></button>
+
+    <input type="text"
+    placeholder="nombre del platillo"
+    name="nombrePlat"
+    [(ngModel)]="nombrePlat">
+  </form>
+
+
+  <div class="flex-box">
+    <h1>No. personas</h1>
+    <div class="normal" [class]="activar(1)" (click)="personas(1)">
+      <i class="fas fa-user"></i>
+    </div>
+
+    <div class="normal"  [class]="activar(2)" (click)="personas(2)">
+      <i class="fas fa-user-friends"></i>
+    </div>
+
+    <div class="normal"  [class]="activar(5)" (click)="personas(5)">
+      <i class="fas fa-users"></i>
+    </div>
+  </div>
+
+</div>
+

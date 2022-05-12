@@ -8,13 +8,13 @@ import { Users } from '../components/Interfaces/user.interface';
 })
 export class ServiceService {
 
-  constructor(private http: HttpClient) { 
-    
+  constructor(private http: HttpClient) {
+
   }
 
   obtenerUsusarios():Observable<any>{
     return this.http.get('http://localhost:3000/usuarios');
-    
+
   }
 
   insertarUsusario(nuevoUsuario: Users):Observable<any>{

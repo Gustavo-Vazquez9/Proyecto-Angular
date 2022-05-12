@@ -8,7 +8,8 @@ import { Observable } from "rxjs";
 })
 export class IngredienteService {
 
-  private url = "http://localhost:3000/ingredientes";
+
+  private url = "http://localhost:3001/ingredientes";
 
   constructor(private http: HttpClient) { }
 

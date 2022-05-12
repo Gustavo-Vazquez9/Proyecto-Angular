@@ -9,25 +9,26 @@ import { Users } from '../Interfaces/user.interface';
 
 export class UsuariosService {
 
+  url : string = 'http://localhost:3002/usuarios';
 
   constructor(private http: HttpClient) {
 
   }
 
   obtenerUsusarios():Observable<any>{
-    return this.http.get('http://localhost:3000/usuarios');
+    return this.http.get(this.url);
 
   }
 
   insertarUsusario(nuevoUsuario: Users):Observable<any>{
-    return this.http.post('http://localhost:3000/usuarios', nuevoUsuario);
+    return this.http.post(this.url, nuevoUsuario);
   }
 
   verificarUsuario(usuario:string):Observable<any>{
-    return this.http.get(`http://localhost:3000/usuarios?usuario=${usuario}`)
+    return this.http.get(`${this.url}?usuario=${usuario}`)
   }
 
   verificarContraseña(contraseña:string):Observable<any>{
-    return this.http.get(`http://localhost:3000/usuarios?contraseña=${contraseña}`)
+    return this.http.get(`${this.url}?contraseña=${contraseña}`)
   }
 }

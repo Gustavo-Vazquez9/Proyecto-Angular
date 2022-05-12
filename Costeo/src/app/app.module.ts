@@ -18,7 +18,8 @@ import { InputComponent } from './Input/input.component';
     TablaPreciosComponent,
     LoginComponent,
     RegisterComponent,
-    PasswordPipe
+    PasswordPipe,
+    InputComponent
   ],
   imports: [
     BrowserModule,

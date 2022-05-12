@@ -7,5 +7,13 @@ import { Ingrediente } from '../interface/Ingrediente';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Costeo';
+  title='Input';
+
+  platillo(plato:string){
+    console.log(plato);
+  }
+
+  personas(cantidad:number){
+    console.log(cantidad);
+  }
 }

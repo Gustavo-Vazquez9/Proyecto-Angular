@@ -5,6 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InputComponent } from './input/input.component';
+import { RegisterComponent } from './register/register.component';
+import { TablaPreciosComponent } from './tabla-precios/tabla-precios.component';
+import { FormIngredientesComponent } from './form-ingredientes/form-ingredientes.component';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -13,6 +17,10 @@ import { InputComponent } from './input/input.component';
     AppComponent,
     LoginComponent,
     InputComponent,
+    RegisterComponent,
+    TablaPreciosComponent,
+    FormIngredientesComponent,
+    HeaderComponent,
 
   ],
   exports: [

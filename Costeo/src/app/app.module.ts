@@ -25,8 +25,7 @@ import { InputComponent } from './Input/input.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    InputComponent
+    FormsModule
   ],
   exports: [
     InputComponent

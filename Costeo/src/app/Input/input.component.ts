@@ -10,7 +10,7 @@ export class InputComponent {
   @Output() onPlatillo : EventEmitter<string> = new EventEmitter();
   @Output() onPersonas : EventEmitter<number> = new EventEmitter();
   activarPersona : number = 0;
-  
+
   nombrePlat : string = '';
 
   constructor() { }

@@ -9,7 +9,7 @@
     .form {
         position: absolute;
         width: 40%;
-        height: 80vh;
+        height: 85vh;
         background-color: map-get($colors, "secondary-bg");
         margin-left: 5vw;
         margin-top: 8vh;
@@ -67,12 +67,11 @@
             }
         }
         .mensajeError {
-            height: 20px;
+            height: 25px;
             width: 50%;
-
             font-family: 'Poppins', sans-serif;
             text-align: center;
-
+            font-size: 15px;
             background-color: rgba(255, 0, 0, 0.171);
             border-radius: 8px;
             margin: 0 auto;

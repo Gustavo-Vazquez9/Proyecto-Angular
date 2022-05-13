@@ -1,142 +1,141 @@
 @import "../../assets/scss/variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 .full-screen {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../../assets/img/login-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    .form {
-        position: absolute;
-        width: 40%;
-        height: 80vh;
-        background-color: map-get($colors, "secondary-bg");
-        margin-left: 5vw;
-        margin-top: 8vh;
-        border-radius: 50px;
-        //box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.5);
-        box-shadow:  -20px -20px 60px rgba(0, 0, 0, 0.5),
-             20px 20px 60px rgba(0, 0, 0, 0.5);
-        h1 {
-            margin-top: 20px;
-            text-align: center;
-            font-weight: bold;
-            font-family: 'Poppins', sans-serif;
-            letter-spacing: 3px;
-        }
-        .form-inputs {
-            margin-top: 25px;
-            label {
-                position: relative;
-                font-family: 'Poppins', sans-serif;
-                font-size: 15px;
-                left: 25%;
-                input {
-                    display: block;
-                    width: 50%;
-                    height: 30px;
-                    border: none;
-                    border-bottom: 2px solid black;
-                    font-size: 17px;
-                    background-color: map-get($colors, "secondary-bg");
-                    margin-bottom: 20px;
-                    outline: none;
-                }
-            }
-        }
-        .register-btn {
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-            button {
-                background-color: map-get($colors, "primary");
-                color: map-get($colors, "primary-bg");
-                text-align: center;
-                font-size: 18px;
-                border: 0px solid #235f26;
-                padding: 5px 50px;
-                border-radius: 50px;
-                transition: all .2s ease;
-                cursor: pointer;
-                &:hover {
-                    font-size: 15px;
-                    box-shadow: inset -50px -50px 100px #235f26,
-                    inset 50px 50px 100px #399b3e;
-                }
-            }
-        }
-        .mensajeError {
-            height: 20px;
-            width: 50%;
-
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-
-            background-color: rgba(255, 0, 0, 0.171);
-            border-radius: 8px;
-            margin: 0 auto;
-            box-shadow: 0px 3px 5px #aaa;
-            p {
-                color: rgb(189, 3, 3);
-            }
-        }
-        .redirigir{
-          margin-top: 15px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../assets/img/login-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  .form {
+      position: absolute;
+      width: 40%;
+      height: 85vh;
+      background-color: map-get($colors, "secondary-bg");
+      margin-left: 5vw;
+      margin-top: 8vh;
+      border-radius: 50px;
+      //box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.5);
+      box-shadow:  -20px -20px 60px rgba(0, 0, 0, 0.5),
+           20px 20px 60px rgba(0, 0, 0, 0.5);
+      h1 {
+          margin-top: 20px;
           text-align: center;
-          a {
-            text-decoration: none;
-            color: map-get($colors, "link-color");
-            transition: all 0.3s ease;
-            &:hover {
-                text-decoration: underline;
-                font-size: 17px;
-            }
-        }
-        }
-    }
-
-
-    ///////////////////////////////
-    .cargando{
-      width: 120px;
-      height: 75px;
-      display: flex;
-      margin: 5px auto;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-    }
-    .cargando span{
-      font-size: 9px;
-      text-transform: uppercase;
-      font-family: 'Poppins', sans-serif;
-      margin: auto;
-    }
-    .puntitos{
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: #235f26;
-        animation: bounce .5s alternate infinite;
-    }
-    .puntitos:nth-child(2)
-        {
-          animation-delay: .16s;
-        }
-    .puntitos:nth-child(3)
-        {
-          animation-delay: .32s;
-        }
-
-    @keyframes bounce {
-      from{
-        transform: scaleX(1.25);
+          font-weight: bold;
+          font-family: 'Poppins', sans-serif;
+          letter-spacing: 3px;
       }
-      to{
-        transform: translateY(-50) scaleX(1);
+      .form-inputs {
+          margin-top: 25px;
+          label {
+              position: relative;
+              font-family: 'Poppins', sans-serif;
+              font-size: 15px;
+              left: 25%;
+              input {
+                  display: block;
+                  width: 50%;
+                  height: 30px;
+                  border: none;
+                  border-bottom: 2px solid black;
+                  font-size: 17px;
+                  background-color: map-get($colors, "secondary-bg");
+                  margin-bottom: 20px;
+                  outline: none;
+              }
+          }
       }
-    }
+      .register-btn {
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+          button {
+              background-color: map-get($colors, "primary");
+              color: map-get($colors, "primary-bg");
+              text-align: center;
+              font-size: 18px;
+              border: 0px solid #235f26;
+              padding: 5px 50px;
+              border-radius: 50px;
+              transition: all .2s ease;
+              cursor: pointer;
+              &:hover {
+                  font-size: 15px;
+                  box-shadow: inset -50px -50px 100px #235f26,
+                  inset 50px 50px 100px #399b3e;
+              }
+          }
+      }
+      .mensajeError {
+          height: 25px;
+          width: 50%;
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+          font-size: 15px;
+          background-color: rgba(255, 0, 0, 0.171);
+          border-radius: 8px;
+          margin: 0 auto;
+          box-shadow: 0px 3px 5px #aaa;
+          p {
+              color: rgb(189, 3, 3);
+          }
+      }
+      .redirigir{
+        margin-top: 15px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: map-get($colors, "link-color");
+          transition: all 0.3s ease;
+          &:hover {
+              text-decoration: underline;
+              font-size: 17px;
+          }
+      }
+      }
+  }
 
-    ///////////////////////////////
+
+  ///////////////////////////////
+  .cargando{
+    width: 120px;
+    height: 75px;
+    display: flex;
+    margin: 5px auto;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .cargando span{
+    font-size: 9px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+  }
+  .puntitos{
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #235f26;
+      animation: bounce .5s alternate infinite;
+  }
+  .puntitos:nth-child(2)
+      {
+        animation-delay: .16s;
+      }
+  .puntitos:nth-child(3)
+      {
+        animation-delay: .32s;
+      }
+
+  @keyframes bounce {
+    from{
+      transform: scaleX(1.25);
+    }
+    to{
+      transform: translateY(-50) scaleX(1);
+    }
+  }
+
+  ///////////////////////////////
 }

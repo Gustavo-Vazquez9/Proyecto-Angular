@@ -27,13 +27,16 @@
       <div class="register-btn">
           <button type="submit" (click)="ingresarUsuario()">Registrarse</button>
       </div>
-      <a [routerLink]="['/login']">¿Ya tienes cuenta?</a>
+      <div class="redirigir">
+        <a [routerLink]="['/login']">¿Ya tienes cuenta?</a>
+      </div>
       <div
       class="cargando"
       *ngIf="registrado">
         <div class="puntitos"></div>
         <div class="puntitos"></div>
         <div class="puntitos"></div>
+        <span>Espere un momento...</span>
       </div>
   </div>
 </div>

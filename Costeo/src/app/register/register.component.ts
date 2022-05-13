@@ -17,6 +17,7 @@ export class RegisterComponent{
   error: boolean = false;
   registrado : boolean = false;
   tiempo : any = timer(5000);
+  tiempoError : any = timer(2000);
 
   constructor(private servicio : UsuariosService, private _router: Router) { }
 
@@ -34,14 +35,16 @@ export class RegisterComponent{
       }); */
       this.tiempo.subscribe( () =>
       {
-        console.log("false");
         this.registrado=false;
         this._router.navigate(['/login']);
       });
-      console.log("true");
       this.registrado=true;
       this.error = false;
     }else{
+      this.tiempoError.subscribe( () =>
+      {
+        this.error= false;
+      });
       this.error= true;
     }
   }

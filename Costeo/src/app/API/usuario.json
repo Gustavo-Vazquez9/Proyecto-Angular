@@ -23,6 +23,12 @@
       "correo": "gus@gmail.com",
       "contraseña": "123",
       "id": 4
+    },
+    {
+      "usuario": "jose",
+      "correo": "josem_rl@hotmail.com",
+      "contraseña": "Contrasenia123",
+      "id": 5
     }
   ]
 }

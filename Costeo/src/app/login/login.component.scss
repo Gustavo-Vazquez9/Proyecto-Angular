@@ -13,7 +13,9 @@
         margin-left: 5vw;
         margin-top: 8vh;
         border-radius: 50px;
-        box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.5);
+        //box-shadow: 20px 20px 4px rgba(0, 0, 0, 0.5);
+        box-shadow:  -20px -20px 60px rgba(0, 0, 0, 0.5),
+             20px 20px 60px rgba(0, 0, 0, 0.5);
         h1 {
             margin-top: 50px;
             text-align: center;
@@ -21,12 +23,11 @@
             letter-spacing: 3px;
         }
         .form-inputs {
-            margin-top: 100px;
+            margin-top: 25px;
             label {
                 position: relative;
                 left: 25%;
                 input {
-                    position: relative;
                     display: block;
                     width: 50%;
                     height: 40px;
@@ -35,34 +36,27 @@
                     background-color: map-get($colors, "secondary-bg");
                     margin-bottom: 20px;
                 }
-                .input-icon {
-                    color: #191919;
-                    position: absolute;
-                    cursor: pointer;
-                    width: 50px;
-                    height: 20px;
-                    left: 360px;
-                    top: 200%;
-                    transform: translateY(-50%);
-                }
             }
         }
         .register-btn {
             display: flex;
             justify-content: center;
-            margin-top: 75px;
+            margin-top: 50px;
             position: relative;
             button {
                 background-color: map-get($colors, "primary");
                 color: map-get($colors, "primary-bg");
                 text-align: center;
                 font-size: 25px;
+                border: 0px solid #235f26;
                 padding: 10px 50px;
                 border-radius: 50px;
                 transition: all .3s ease;
+                cursor: pointer;
                 &:hover {
-                    font-size: 30px;
-                    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+                    font-size: 20px;
+                    box-shadow: inset -50px -50px 100px #235f26,
+            inset 50px 50px 100px #399b3e;
                 }
             }
         }
@@ -82,8 +76,8 @@
             position: absolute;
             text-decoration: none;
             color: map-get($colors, "link-color");
-            margin-top: 50px;
-            left: 35%;
+            margin-top: 35px;
+            left: 40%;
             transition: all 0.3s ease;
             &:hover {
                 text-decoration: underline;

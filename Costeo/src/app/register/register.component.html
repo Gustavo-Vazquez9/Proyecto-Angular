@@ -28,5 +28,12 @@
           <button type="submit" (click)="ingresarUsuario()">Registrarse</button>
       </div>
       <a [routerLink]="['/login']">¿Ya tienes cuenta?</a>
+      <div
+      class="cargando"
+      *ngIf="registrado">
+        <div class="puntitos"></div>
+        <div class="puntitos"></div>
+        <div class="puntitos"></div>
+      </div>
   </div>
 </div>

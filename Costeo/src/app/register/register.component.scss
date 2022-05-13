@@ -78,7 +78,7 @@
             text-decoration: none;
             color: map-get($colors, "link-color");
             margin-top: 35px;
-            left: 40%;
+            left: 39%;
             transition: all 0.3s ease;
             &:hover {
                 text-decoration: underline;
@@ -97,6 +97,12 @@
       flex-wrap: wrap;
       align-items: flex-end;
       justify-content: space-between;
+    }
+    .cargando span{
+      font-size: 12px;
+      text-transform: uppercase;
+      font-family: 'Poppins', sans-serif;
+      margin: auto;
     }
     .puntitos{
         width: 25px;

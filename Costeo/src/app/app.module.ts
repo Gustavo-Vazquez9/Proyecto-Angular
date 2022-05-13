@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { TablaPreciosComponent } from './tabla-precios/tabla-precios.component';
 import { FormIngredientesComponent } from './form-ingredientes/form-ingredientes.component';
 import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -31,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

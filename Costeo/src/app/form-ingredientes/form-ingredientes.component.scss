@@ -6,8 +6,8 @@
 }
 .contenedor-form {
   position: absolute;
-  top: 15%;
-  left: 30%;
+  top: 45%;
+  left: 27%;
   width: 41%;
   height: 58%;
   background-color: white;
@@ -21,12 +21,12 @@
     position: absolute;
     width: 36%;
     height: 37%;
-    top: 11%;
+    top: 8%;
   }
 
   .ingrediente-container {
     position: absolute;
-    top: 40%;
+    top: 36%;
     padding-top: 10px;
     background-color: #e5e5e5;
     width: 36%;
@@ -39,33 +39,34 @@
     #label_ing {
       position: absolute;
       font-size: 20px;
-      left: 35%;
+      left: 25%;
+      top: 5%;
     }
 
     #label_cantidad {
       position: absolute;
       font-size: 20px;
-      left: 35%;
-      margin-top: 60px;
+      left: 30%;
+      margin-top: 10px;
     }
 
     #input_ing {
       position: absolute;
-      left: 15%;
+      left: 13%;
       width: 70%;
       height: 8%;
       padding: 5px;
-      margin-top: 30px;
+      margin-top: -1%;
       margin-bottom: 30px;
     }
 
     #inputCantidad {
       position: absolute;
-      left: 15%;
+      left: 13%;
       width: 70%;
       height: 8%;
       padding: 5px;
-      margin-top: 70px;
+      margin-top: 25px;
       margin-bottom: 30px;
     }
   }
@@ -74,7 +75,7 @@
     background-color: #e5e5e5;
     position: absolute;
     left: 50%;
-    top: 11%;
+    top: 8%;
     width: 44%;
     height: 75%;
     text-align: center;
@@ -92,47 +93,50 @@
 
     select {
       position: absolute;
-      top: 10%;
-      left: 6%;
+      top: 15%;
+      left: 2%;
       margin: 20px;
       width: 80%;
       height: 5%;
       margin-bottom: 40px;
+
     }
 
     #label_unidad {
       position: absolute;
       margin: 50px;
       top: -5%;
-      left: 26%;
+      left: 16%;
     }
 
     #label_precio {
       position: absolute;
       margin: 50px;
-      top: 20%;
-      left: 29%;
+      top: 15%;
+      left: 18%;
     }
 
     #input_precio {
       position: absolute;
       top: 37%;
-      left: 9%;
+      left: 7%;
       width: 80%;
     }
 
     #label_peso {
       position: absolute;
       margin: 50px;
-      top: 45%;
-      left: 32%;
+      top: 35%;
+      left: 20%;
+      display: none;
     }
 
     #input_peso {
       position: absolute;
-      top: 62%;
-      left: 9%;
+      top: 60%;
+      left: 7%;
       width: 80%;
+      display: none;
     }
 
     button {
@@ -140,7 +144,7 @@
       margin-top: 30px;
       width: 50%;
       height: 10%;
-      left: 26%;
+      left: 25%;
       top: 75%;
       background: #43a047;
       border: 0;

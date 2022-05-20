@@ -1,0 +1,28 @@
+.card{
+  background-color: #2E7D32;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 180vh;
+
+  &-table{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ECEFF1;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  &-button{
+    padding: 4px 20px ;
+    margin: 12px;
+    border-radius:25px ;
+    right: 12px;
+
+  }
+}
+table{
+   align-items: center;
+    text-align: center;
+    width: 100%;
+}

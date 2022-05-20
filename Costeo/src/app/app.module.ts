@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { TablaPreciosComponent } from './tabla-precios/tabla-precios.component';
 import { FormIngredientesComponent } from './form-ingredientes/form-ingredientes.component';
 import { HeaderComponent } from './header/header.component';
+import { MermasComponent } from './mermas/mermas.component';
 
 
 
@@ -23,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
     TablaPreciosComponent,
     FormIngredientesComponent,
     HeaderComponent,
+    MermasComponent,
 
   ],
   exports: [

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, EventEmitter, Output } from '@angular/core';
 import { Ingrediente} from '../../app/Interfaces/ingrediente.interface';
 import { InputComponent } from '../input/input.component';
 
@@ -19,8 +19,12 @@ export class TablaPreciosComponent{
   acumulador: number = 0;
 
   nombrePlat : string = '';
+  sumaDeltotal: number = 0;
+
+  @Output() onTotalgeneral: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
+
 
   recibirNombre(recibeIngrediente:string){
     this.ingrediente=recibeIngrediente;
@@ -63,7 +67,9 @@ platillo(plato:string){
 }
 
 finalizar(){
-  console.log(this.nombrePlat);
+this.onTotalgeneral.emit(this.acumulador);
 }
+
+
 
 }

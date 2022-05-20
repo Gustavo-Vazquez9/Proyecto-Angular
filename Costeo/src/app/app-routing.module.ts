@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TablaPreciosComponent } from './tabla-precios/tabla-precios.component';
+import { MermasComponent } from './mermas/mermas.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'costeo',
-    component: TablaPreciosComponent,
+    component: MermasComponent,
     pathMatch: 'full',
   },
   {

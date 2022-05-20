@@ -1,13 +1,18 @@
-
-<app-input (onPlatillo)="platillo($event)" (onPersonas)="personas($event)"></app-input>
+<app-input (onPlatillo)="platillo($event)">
+</app-input>
 <app-form-ingredientes
 (onIngredienteNombre)="recibirNombre($event)"
 (onCantidadNombre)="recibirCantidad($event)"
 (onUnidadNombre)="recibirUnidad($event)"
 (onPrecioNombre)="recibirPrecio($event)"
-(onPesoNombre)="recibirPeso($event)"
 (onTotal)="esTotal($event)"></app-form-ingredientes>
 <section class="table-decoration">
+  <tr class="content-platillo">
+    <td></td>
+    <td class="plat"><b>Nombre del platillo:</b></td>
+    <td class="nombre-platillo">{{nombrePlat}}</td>
+    <td></td>
+  </tr>
   <table>
     <thead>
       <tr>
@@ -21,7 +26,14 @@
         <td class="with-border">{{item [3]}}</td>
         <td class="nula">{{item [4]}}</td>
       </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="suma"><b>Total</b></td>
+        <td class="suma"><b>{{this.acumulador}}</b></td>
+      </tr>
 
   </table>
-  <button>Finalizar</button>
+  <button (click)="finalizar()">Finalizar</button>
 </section>

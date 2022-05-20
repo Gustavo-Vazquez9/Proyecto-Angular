@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Ingrediente} from '../../app/Interfaces/ingrediente.interface';
+import { InputComponent } from '../input/input.component';
 
 @Component({
   selector: 'app-tabla-precios',
@@ -15,14 +16,11 @@ export class TablaPreciosComponent{
   precio : number = 0;
   total : number = 0;
   peso: number = 0;
-  constructor() { }
-  platillo(plato:string){
-    console.log(plato);
-  }
+  acumulador: number = 0;
 
-  personas(cantidad:number){
-    console.log(cantidad);
-  }
+  nombrePlat : string = '';
+
+  constructor() { }
 
   recibirNombre(recibeIngrediente:string){
     this.ingrediente=recibeIngrediente;
@@ -46,13 +44,26 @@ export class TablaPreciosComponent{
 
  }
 
- esTotal(recibeTotal:number){
-   this.total=recibeTotal;
-   this.lista_ingredientes.push([this.ingrediente,this.cantidad,this.unidad,this.precio,this.total]);
- }
-
  recibirPeso(peso:number) {
    this.peso = peso;
-   console.log(this.peso);
+  //  console.log(this.peso);
  }
+ esTotal(recibeTotal:number){
+  this.total=recibeTotal;
+  this.lista_ingredientes.push([this.ingrediente,this.cantidad,this.unidad,this.precio,this.total]);
+  this.acumulador=0;
+  for (let i =0; i<this.lista_ingredientes.length; i++) {
+    this.acumulador += this.lista_ingredientes[i][4];
+  }
+  // console.log(this.acumulador)
+}
+
+platillo(plato:string){
+  this.nombrePlat=plato;
+}
+
+finalizar(){
+  console.log(this.nombrePlat);
+}
+
 }

@@ -6,7 +6,7 @@
 }
 .contenedor-form {
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: 30%;
   width: 41%;
   height: 58%;
@@ -223,7 +223,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .contenedor-form {
     width: 70%;
     left: 9%;
@@ -329,6 +329,71 @@
 
       #input_peso {
         left: 8%;
+      }
+    }
+  }
+}
+@media (max-width: 1366px) {
+
+  .contenedor-form {
+    img {
+      top: 7%;
+    }
+
+    .ingrediente-container {
+      bottom: 10%;
+      top: 35%;
+
+      #label_ing {
+        left: 26%;
+        top: 10%;
+      }
+
+      #label_cantidad {
+        left: 28%;
+        margin-top: 20px;
+      }
+
+      #input_ing {
+        left: 15%;
+        top: 16%;
+        margin-bottom: 30px;
+      }
+
+      #inputCantidad {
+        left: 15%;
+        margin-top: 30px;
+      }
+    }
+
+    .container-ingrediente-2 {
+      top: 7%;
+
+      select {
+        left: 3%;
+        margin-top: 30px;
+      }
+
+      #label_unidad {
+        left: 20%;
+      }
+
+      #label_precio {
+        left: 23%;
+      }
+
+      #input_precio {
+        left: 8%;
+        margin-top: 20px;
+      }
+
+      #label_peso {
+        left: 25%;
+      }
+
+      #input_peso {
+        left: 8%;
+        margin-top: 20px;
       }
     }
   }
